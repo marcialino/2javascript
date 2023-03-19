@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo de um número</title>
+    <style>
+       body{
+        background-color:#aeb39594  ;
+       }
+       header{
+     
+            text-align: center;
+        }
+        input#btn{
+            font: normal 12pt Arial;
+            font-weight: bold;
+            padding: 15px;
+            margin-left: 330px;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            
+        }
+        div#res{
+            font: normal 12pt Arial;
+            background-color:#e75a7a ;
+            color: aliceblue;
+            width:400px;
+            margin: auto;
+            padding: 15px;
+            text-align: center;
+           
+        }
+        p{
+            font:normal 14pt Arial;
+            font-weight: bold;
+        }
+   
+    </style>
+</head>
+<body>
+    <header><h1>Cubo de um Número</h1></header>
+    
+    <div><input type="button" value="Calcular" name="btn" id="btn" onclick="clicar()"></div>
+
+    <div id="res">
+        <p>Clique no botão acima para calcular!</p>
+    </div>
+
+</body>
+
+<script>
+    function clicar(){
+        var n = Number(window.prompt('Digite um número'))
+
+        var cubo = n*n*n
+
+        var res = window.document.getElementById('res')
+
+        res.innerHTML = `Você digitou o número <strong>${n}</strong><br/><br/>
+        O cubo desse número é <strong>${cubo}<strong/>.`
+    }
+</script>
+</html>
