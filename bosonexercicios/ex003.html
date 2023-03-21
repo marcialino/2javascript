@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Temperatura</title>
+</head>
+<body>
+    <header><h1>Conversão de Temperatura</h1></header>
+    <div>
+        Digite uma temperatura em °F: <input type="number" name="temp" id="temp">
+        <input type="button" value="Converter" name="conv" id="conv" onclick="converter()">
+    </div>
+    <div id="res">
+        <p>Preencha o campo acima para começar.</p>
+    </div>
+
+    <script>
+        function converter() {
+        var temp = Number(window.document.getElementById('temp'))
+        
+        var tempC = temp + 10
+       
+           
+      
+       
+        var res = window.document.getElementById('res')
+       
+          res.innerHTML = `A temperatura ${te}°F corresponde a ${tempC}°C`
+        
+       }
+           
+       </script>
+
+</body>
+
+
+</html>
