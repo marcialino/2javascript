@@ -5,33 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversão de Temperatura</title>
+
+    <style>
+        body{
+            font: normal 14pt Arial;
+            background-color: #7c7A7A;
+            
+        }
+        h1{
+            color: white;
+            text-align: center;
+        }
+
+        div#res{
+            font-weight: bold;
+        }
+        input#btn{
+            padding: 15px;
+            font: bold 12pt Arial;
+        }
+        section{
+            background-color: white;
+            width: 600px;
+            height: 150px;
+            margin: auto;
+            padding: 15px;
+        }
+        footer{
+            color: white;
+            text-align: center;
+            font-style: italic ;
+        }
+    </style>
 </head>
 <body>
-    <header><h1>Conversão de Temperatura</h1></header>
-    <div>
-        Digite uma temperatura em °F: <input type="number" name="temp" id="temp">
-        <input type="button" value="Converter" name="conv" id="conv" onclick="converter()">
-    </div>
-    <div id="res">
-        <p>Preencha o campo acima para começar.</p>
-    </div>
+    <header>
+        <h1>Conversor de Temperatura</h1></header>
+
+    <section>
+        <div></div>
+            Insira uma temperatura em °F <input type="number" name="temp" id="temp">
+            <input type="button" value="Converter" name="btn" id="btn" onclick="converter()" >
+        </div>
+        <div id="res">
+            <p>Insira o dado solicitado para começar.</p>
+        </div>
+    </section>
 
     <script>
-        function converter() {
-        var temp = Number(window.document.getElementById('temp'))
-        
-        var tempC = temp + 10
-       
-           
-      
-       
-        var res = window.document.getElementById('res')
-       
-          res.innerHTML = `A temperatura ${te}°F corresponde a ${tempC}°C`
-        
-       }
-           
-       </script>
+        function converter(){
+    
+            var temp = window.document.getElementById('temp')
+            var res = window.document.getElementById('res')
+    
+            var t = Number(temp.value)
+            var tc = (t - 32)* 5/9
+            var tcf = tc.toFixed(2)
+    
+            res.innerHTML = `<p style="font: bold 14pt Arial;">A temperatura ${t}°F corresponde à ${tcf}°C.</p> `
+    
+        }
+    </script>
+
+    <footer>
+        <p>&copy;Márcia Lino</p>
+    </footer>
 
 </body>
 
