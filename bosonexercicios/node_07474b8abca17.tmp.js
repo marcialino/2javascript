@@ -15,8 +15,8 @@ function mediaArray(num){
 var soma = 0
 var n = num.length
 
-for(var c= 0; c<n; c++){
-    soma +=num[c]
+for(var c= 0; c,n; c++){
+    soma +=c
 }
     return soma/n
 }
