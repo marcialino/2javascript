@@ -12,7 +12,8 @@
     <script>
        window.confirm('Vamos converter temperaturas de Celsius para Fahrenheit')
       var temp = Number(window.prompt('Digite uma temperatura'))
-      return(temp)
+      var t = (temp*9/5) +32
+      document.write (`A temperatura de ${temp}°C corresponde a${t}°F`)
     </script>
 </body>
 </html>
