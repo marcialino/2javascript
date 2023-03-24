@@ -1,4 +1,4 @@
-/*function mediaArray(ar){
+function mediaArray(ar){
     var n = ar.length
     var soma = 0
 
@@ -9,7 +9,7 @@
 }
 var ar = [1,3,9,15,90]
 var media = mediaArray(ar)
-console.log("mediaArray: ",media)*/
+console.log("mediaArray: ",media)
 
 function mediaArray(num){
 var soma = 0
