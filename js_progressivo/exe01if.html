@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração IF</title>
+</head>
+<body>
+ <div>
+    <p>Digite uma letra: <input type="text" name="letra" id="letra"></p>
+    <p><input type="button" value="Clicar" name="btn" id="btn" onclick="clicar()"></p>
+ </div>
+
+ <div id="res">
+    <p>Preencha o campo e clique no botão para ter o resultado</p>
+ </div>
+
+   <script>
+    function clicar(){
+        var letra = window.document.getElementById('letra').value
+        letra = letra.toLowerCase()
+        var res = window.document.getElementById('res')
+
+        if(letra.length == 0){
+            alert('Digite uma letra para começar')
+        }      
+        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == '0' || letra =='u'){
+            res.innerHTML = `A letra <strong>${letra}</strong> é uma vogal.`
+        }else{
+            res.innerHTML = `A letra <strong>${letra}</strong> é  uma consoante.`
+        }
+        letra.value = ''
+        letra.focus()
+    }
+   </script> 
+</body>
+</html>
