@@ -38,18 +38,20 @@
           
             var resultado = ''
 
-            if(nome.length == 0 || nota1.length == 0 || nota2.length == 0){
-                alert('Preencha todos os dados para continuar')
-            }
-            if(med < 7){
-                resultado = 'reprovado(a)'
-            
-            }else if(med >= 7){
-                resultado = 'aprovado(a)'
-            }
-            res.innerHTML = `${nome} foi ${resultado}, pois ficou com média ${med}. `
-                  
-        }
+            /*if(nome.length == 0 || nota1.length == 0 || nota2.length == 0){
+                alert('Preencha todos os dados para continuar')*/
+
+           if (med >=7)
+              if (med ==10)
+                    resultado = ('aprovado(a) com distinção')
+                else
+                    resultado = ('aprovado(a)')
+                else
+                    resultado = ('reprovado(a)')
+
+           res.innerHTML = `${nome} foi ${resultado}, sua média foi ${med}.`
+        }      
+        
 
             
          

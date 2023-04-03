@@ -20,6 +20,11 @@ section{
 div#tab{
     margin-left: 75px;
 }
+#btn{
+    padding: 8px;
+    border-radius: 8px;
+    font: bold 12px Arial;
+}
    
 footer{
     color: white ;
