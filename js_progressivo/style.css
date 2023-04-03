@@ -25,6 +25,12 @@ div#tab{
     border-radius: 8px;
     font: bold 12px Arial;
 }
+#btn2{
+    padding: 8px;
+    border-radius: 8px;
+    font: bold 12px Arial;
+    margin: 10px;
+}
    
 footer{
     color: white ;
