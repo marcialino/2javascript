@@ -25,6 +25,9 @@
 
     <script>
 
+    if(num1.value.length == 0 || num2.value.length == 0 || num3.value.length == 0)
+        alert('Insira todos os dados para continuar!')
+    
         function maior(){
             var num1 = parseInt(window.document.getElementById('num1').value)
             var num2 = parseInt(window.document.getElementById('num2').value)
@@ -32,7 +35,7 @@
             var res = window.document.getElementById('res')
     
             var maior = num1
-        
+ 
             if(num2 > maior){
                 maior = num2
             }if(num3 > maior){
@@ -48,6 +51,8 @@
             var res = window.document.getElementById('res')
     
             var menor = num1
+
+
             if(num2 < menor){
                 menor = num2
             }if(num3 < menor){
