@@ -34,23 +34,25 @@
             var res = window.document.getElementById('res')
 
             var media = (nota1 + nota2)/2
-            var med = media.toLocaleString().replace("." , ",")
+            
           
             var resultado = ''
 
-            /*if(nome.length == 0 || nota1.length == 0 || nota2.length == 0){
-                alert('Preencha todos os dados para continuar')*/
+        if(nome.length == 0 || nota1.length == 0 || nota2.length == 0)
+                alert('Preencha todos os dados para continuar')
 
-           if (med >=7)
-              if (med ==10)
-                    resultado = ('aprovado(a) com distinção')
-                else
-                    resultado = ('aprovado(a)')
-                else
-                    resultado = ('reprovado(a)')
+           if (media >=7){
+            resultado = 'aprovado(a)'
+           } else{
+            resultado = 'reprovado(a)'
+           }
+         
+            res.innerHTML = `${nome} foi ${resultado}, sua média foi ${media}.`
+          
+    }
+               
 
-           res.innerHTML = `${nome} foi ${resultado}, sua média foi ${med}.`
-        }      
+          
         
 
             
