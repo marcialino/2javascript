@@ -36,7 +36,6 @@
             var media = (nota1 + nota2)/2
             var med = media.toLocaleString().replace("." , ",")
           
-
             var resultado = ''
 
             if(nome.length == 0 || nota1.length == 0 || nota2.length == 0){
@@ -44,9 +43,8 @@
             }
             if(med < 7){
                 resultado = 'reprovado(a)'
-            }else if(med ==10){
-                resultado = 'aprovado(a) com distinção'
-            }else if(med >= 7 || med <= 9.9){
+            
+            }else if(med >= 7){
                 resultado = 'aprovado(a)'
             }
             res.innerHTML = `${nome} foi ${resultado}, pois ficou com média ${med}. `
