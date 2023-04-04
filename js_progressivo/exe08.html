@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumento Salarial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Reajuste Salarial</h1></header>
+
+    <section>
+        <div>
+            <p>Informe o seu salário: <input type="number" name="salario" id="salario"></p>
+            <p>
+            <input type="button" value="Calcular" name="btn" id="btn" onclick="calcular()">
+            </p>
+        </div>
+        <div id="res">
+            <p>Informe o seu salário e clique no botão para calcular!</p>
+        </div>
+    </section>
+    
+    <footer>&copy;Márcia Lino </footer>
+
+    <script>
+        function calcular(){
+            var sal = parseFloat(window.document.getElementById('salario').value)
+            var res = window.document.getElementById('res')
+
+           var perc_aumento = ''
+           
+
+           if(sal <= 1400){
+            perc_aumento = 20
+           }else if(sal > 1400 && sal < 2200){
+            perc_aumento = 15
+           }else if(sal >= 2200 && sal <= 4000){
+            perc_aumento = 10
+           }else if(sal > 4000){
+            perc_aumento = 5
+           }
+           
+           var aumento = (sal*perc_aumento)/100
+           var novo_sal = sal + aumento
+
+           res.innerHTML = ''
+           res.innerHTML += `<p> <br/> Salário antes do reajuste: ${sal.toLocaleString('pt-br', {style:'currency', currency:'BRL'})} <br/>
+           Percentual de Aumento: ${perc_aumento}%<br/>
+           Valor do Aumento: ${aumento.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}<br/>
+           Novo salário: ${novo_sal.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}</p>`
+
+           sal.value = ''
+           sal.focus()
+        }
+    </script>
+</body>
+</html>
