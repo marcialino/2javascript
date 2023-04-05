@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de pagamento e seus descontos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Folha de Pagamento e Descontos</h1></header>
+
+    <section>
+        <div>
+            <p>Valor da hora trabalhada: <input type="number" name="val_hora" id="val_hora"></p>
+            Quantidade de horas mensais trabalhadas: <input type="number" name="qtd_hora" id="qtd_hora">
+            <p><input type="button" value="Calcular" name="btn" id="btn" onclick="calcular()"></p>
+        </div>
+        <div id="res">
+            <p>Insira os dados para calcular!</p>
+        </div>
+    </section>
+
+    <footer> &copy; Márcia Lino</footer>
+
+    <script>
+        function calcular(){
+            var val_hora = parseFloat(window.document.getElementById('val_hora').value)
+            var qtd_hora = parseFloat(window.document.getElementById('qtd_hora').value)
+
+            var res = window.document.getElementById('res')
+            
+       
+            var a_fgts = 11
+            var a_ir = ''
+            var a_sind = 3
+            var a_inss = 10
+            
+           
+            var sal_bruto = val_hora * qtd_hora
+
+            if(sal_bruto <= 900){
+                a_ir = 0
+               
+            }if(sal_bruto > 900 && sal_bruto <= 1500){
+                a_ir =  5
+            }if (sal_bruto > 1500 & sal_bruto <= 2500){
+                a_ir= 10
+            }if(sal_bruto > 2500){
+                a_ir = 20
+            }
+            
+            var v_fgts = (sal_bruto* a_fgts)/100
+            
+            var v_ir = (sal_bruto * a_ir)/100
+            var v_inss = (sal_bruto * a_inss)/100
+            var v_sind = (sal_bruto * a_sind)/100
+            var desc = v_ir + v_sind + v_inss
+            var sal_liq = sal_bruto - desc
+    
+            res.innerHTML +=`Salário Bruto: ${sal_bruto.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            (-)IR (${a_ir}): ${v_ir.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            (-)INSS (${a_inss}: ${v_inss.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}<br>
+            (-)Sindicato (${a_sind}): ${v_sind.toLocaleString('pt-br', {style:'currency', currency: 'BRL'})}
+            FGTS (${a_fgts}): ${v_fgts.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            Total de descontos: ${desc.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            Salário Líquido: ${sal_liq.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}`
+            
+
+        }
+    </script>
+</body>
+</html>
