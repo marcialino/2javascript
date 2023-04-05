@@ -39,15 +39,17 @@
            
             var sal_bruto = val_hora * qtd_hora
 
-            if(sal_bruto <= 900){
+            if(sal_bruto <= 1903){
                 a_ir = 0
                
-            }if(sal_bruto > 900 && sal_bruto <= 1500){
-                a_ir =  5
-            }if (sal_bruto > 1500 & sal_bruto <= 2500){
-                a_ir= 10
-            }if(sal_bruto > 2500){
-                a_ir = 20
+            }if(sal_bruto > 1903 && sal_bruto <= 2826){
+                a_ir =  7.5
+            }if (sal_bruto > 2826 && sal_bruto <= 3751){
+                a_ir= 15
+            }if(sal_bruto > 3751 && sal_bruto <= 4664){
+                a_ir = 22.5
+            }if(sal_bruto > 4664){
+                a_ir = 27.5
             }
             
             var v_fgts = (sal_bruto* a_fgts)/100
@@ -58,13 +60,13 @@
             var desc = v_ir + v_sind + v_inss
             var sal_liq = sal_bruto - desc
     
-            res.innerHTML +=    `Salário Bruto:&nbsp;&nbsp;&nbsp;&nbsp; ${sal_bruto.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
-            (-)IR (${a_ir}):&nbsp;&nbsp;&nbsp; ${v_ir.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
-            (-)INSS (${a_inss}:&nbsp;&nbsp;&nbsp; ${v_inss.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}<br>
-            (-)Sindicato (${a_sind}):&nbsp;&nbsp;&nbsp; ${v_sind.toLocaleString('pt-br', {style:'currency', currency: 'BRL'})}<br>
-            FGTS (${a_fgts}):&nbsp;&nbsp;&nbsp; ${v_fgts.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
-            Total de descontos:&nbsp;&nbsp; ${desc.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
-            Salário Líquido:&nbsp;&nbsp;&nbsp; ${sal_liq.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}`
+            res.innerHTML =    `Salário Bruto:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${sal_bruto.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            (-) IR (${a_ir}%):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; ${v_ir.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            (-) INSS (${a_inss}%):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${v_inss.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}<br>
+            (-) Sindicato (${a_sind}%):&nbsp;&nbsp;&nbsp; ${v_sind.toLocaleString('pt-br', {style:'currency', currency: 'BRL'})}<br>
+            FGTS (${a_fgts}%):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp; ${v_fgts.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            Total de descontos:&nbsp; ${desc.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            <strong>Salário Líquido:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>${sal_liq.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}</strong>`
             
 
         }
