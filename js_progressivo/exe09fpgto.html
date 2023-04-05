@@ -58,13 +58,13 @@
             var desc = v_ir + v_sind + v_inss
             var sal_liq = sal_bruto - desc
     
-            res.innerHTML +=`Salário Bruto: ${sal_bruto.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
-            (-)IR (${a_ir}): ${v_ir.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
-            (-)INSS (${a_inss}: ${v_inss.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}<br>
-            (-)Sindicato (${a_sind}): ${v_sind.toLocaleString('pt-br', {style:'currency', currency: 'BRL'})}
-            FGTS (${a_fgts}): ${v_fgts.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
-            Total de descontos: ${desc.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
-            Salário Líquido: ${sal_liq.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}`
+            res.innerHTML +=    `Salário Bruto:&nbsp;&nbsp;&nbsp;&nbsp; ${sal_bruto.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            (-)IR (${a_ir}):&nbsp;&nbsp;&nbsp; ${v_ir.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            (-)INSS (${a_inss}:&nbsp;&nbsp;&nbsp; ${v_inss.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}<br>
+            (-)Sindicato (${a_sind}):&nbsp;&nbsp;&nbsp; ${v_sind.toLocaleString('pt-br', {style:'currency', currency: 'BRL'})}<br>
+            FGTS (${a_fgts}):&nbsp;&nbsp;&nbsp; ${v_fgts.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            Total de descontos:&nbsp;&nbsp; ${desc.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>
+            Salário Líquido:&nbsp;&nbsp;&nbsp; ${sal_liq.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}`
             
 
         }
