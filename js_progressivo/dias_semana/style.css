@@ -1,14 +1,14 @@
 body{
-    background-color: rgb(118, 118, 204);
+    background-color: #04e762;
     font: normal 12pt Arial;
 }
 header{
-    color: white;
+    color: #285943;
     text-align: center;
 
 }
 section{
-    background-color: #b6d0e2;
+    background-color: #FCFCFC;
     border-radius: 10px;
     color: black;
     padding: 15px;
@@ -33,7 +33,8 @@ div#tab{
 }
    
 footer{
-    color: white ;
+    color:#285943; 
+    font: bold 12pt Arial;
     text-align: center;
     font-style: italic;
     padding: 8px;
