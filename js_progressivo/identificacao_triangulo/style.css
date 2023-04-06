@@ -1,16 +1,16 @@
 body{
-    background-color: rgb(118, 118, 204);
-    font: normal 12pt Arial;
+    background-color: #beffc7;
+    font: normal 13pt Arial;
 }
 header{
-    color: white;
+    color: black;
     text-align: center;
 
 }
 section{
-    background-color: #b6d0e2;
+    background-color: #14591d;
     border-radius: 10px;
-    color: black;
+    color: white;
     padding: 15px;
     width: 500px;
     margin: auto;
