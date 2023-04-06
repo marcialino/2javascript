@@ -7,8 +7,12 @@ header{
     text-align: center;
 
 }
+h2{
+    color: white;
+    text-align: center;
+}
 section{
-    background-color: #b6d0e2;
+    background-color: #fbca41;
     border-radius: 10px;
     color: black;
     padding: 15px;
@@ -22,6 +26,7 @@ div#tab{
 }
 #btn{
     padding: 8px;
+    margin-bottom: 10px;
     border-radius: 8px;
     font: bold 13px Arial;
 }
