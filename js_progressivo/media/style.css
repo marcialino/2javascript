@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(118, 118, 204);
+    font: normal 12pt Arial;
+}
+header{
+    color: white;
+    text-align: center;
+
+}
+section{
+    background-color: #b6d0e2;
+    border-radius: 10px;
+    color: black;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.464);
+
+}
+div#tab{
+    margin-left: 75px;
+}
+#btn{
+    padding: 8px;
+    border-radius: 8px;
+    font: bold 13px Arial;
+}
+#btn2{
+    padding: 8px;
+    border-radius: 8px;
+    font: bold 12px Arial;
+    margin: 10px;
+}
+   
+footer{
+    color: white ;
+    text-align: center;
+    font-style: italic;
+    padding: 8px;
+}
