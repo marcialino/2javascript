@@ -6,6 +6,9 @@ function clicar(){
     /*Transformando o número em uma array*/ 
     n = Array.from(String(num)) 
    
+    if(n.length >= 4){
+        alert('Dados inválidos. Insira novamente um número menor do que 1000!')
+    }
     if (n.length == 3){
         res.innerHTML = `O número <strong>${num}</strong> tem <strong>${n[0]}</strong> centenas, <strong>${n[1]}</strong> dezenas e <strong>${n[2]}</strong> unidades. `
     }if (n.length == 2){
