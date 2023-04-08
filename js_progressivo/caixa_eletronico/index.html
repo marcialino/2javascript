@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa eletrônico</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilomediaquery.css">
+</head>
+<body>
+<header><h1>Caixa Eletrônico</h1></header>
+<section>
+    <p>Notas disponíveis:$1,00, $5,00, $10,00, $50,00 e $100,00. </p>
+    <div><p>Valor do saque: <input type="number" name="saque" id="saque" placeholder="min: 10 e max: 600"></p></div>
+
+    <p><input type="button" value="Sacar" name="btn" id="btn" onclick="sacar()"></p>
+</section>
+<div id="res">
+    <p>Informe o valor do saque e clique no botão!</p>
+</div>
+
+<footer><p>&copy; Márcia Lino</p></footer>
+
+<script src="caixa.js"></script>
+</body>
+</html>
