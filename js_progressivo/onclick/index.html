@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Click</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1{
+            color: green;
+        }
+        
+    </style>
+</head>
+<body>
+    <header><h1>Evento Click</h1></header>
+    <h4>Como contar o número de vezes que o botão foi clicado!</h4>
+    <p><button id="btn">Clique aqui</button></p>
+    <p><button id="btn1">Não</button></p>
+    <p>Botão Clicado <span id="display">0</span> vezes</p>
+    <p>Botão Não clicado <span id="resplay">0 vezes</span></p>
+
+    <div id="res">
+        <p>Vamos começar</p>
+    </div>
+
+    <script>
+        var count = 0
+        var btn = document.getElementById('btn')
+        var disp = document.getElementById('display')
+
+        var count1 = 0
+        var btn1 = document.getElementById('btn1')
+        var resp = document.getElementById('resplay')
+
+        btn.onclick = function(){
+            count++
+            if(count == 5){
+                res.innerHTML = 'Assassino'
+            }if(count == 2){
+                res.innerHTML = 'Supeito'
+            }
+            
+        }
+        btn1.onclick = function(){
+            count1++
+            resp.innerHTML = count1
+        }
+    </script>
+</body>
+</html>

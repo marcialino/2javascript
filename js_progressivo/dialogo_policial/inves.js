@@ -1,8 +1,15 @@
-function enviar(){
-    var confirm = ''
+/*function enviar(){*/
+    var count = 0
     var sim1 = window.document.getElementById('sim1')
+    var btn = window.document.getElementById('btn')
+
+    btn.onclick = function (){
+        count++
+        sim1.innerHTML = count
+
+    }
    
-    var sim2 = window.document.getElementById('sim2')
+    /*var sim2 = window.document.getElementById('sim2')
     var sim3 = window.document.getElementById('sim3')
     var sim4 = window.document.getElementById('sim4')
     var sim5 = window.document.getElementById('sim5')
@@ -18,6 +25,6 @@ function enviar(){
         confirm = "sim"
     })
     
-res.innerHTML = `${confirm}`
+res.innerHTML = `${confirm}`*/
    
 }
