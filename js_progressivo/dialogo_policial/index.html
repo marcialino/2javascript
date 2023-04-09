@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diálogo Policial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Investigação Policial</h1></header>
+    <section>
+        <div>
+            <p>Telefonou para a Vítima?  <input type="button" value="Sim" name="sim1" id="sim1"> <input type="button" value="Não" name="nao1" id="nao1"></p>
+            <p>Esteve com a Vítima? <input type="button" value="Sim" name="sim2" id="sim2" > <input type="button" value="Não" name="nao2" id="nao2"></p>
+            <p>Mora perto da Vítima? <input type="button" value="Sim" name="sim3" id="sim3"> <input type="button" value="Não" name="nao3" id="nao3"></p>
+            <p>Devia para a Vítima? <input type="button" value="Sim" name="sim4" id="sim4"> <input type="button" value="Não" name="nao4" id="nao4"></p>
+            <p>Já trabalhou com a Vítima? <input type="button" value="Sim" name="sim5" id="sim5"><input type="button" value="Não" name="nao5" id="nao5"> </p>
+
+            <p><input type="submit" name="btn" id="btn" onclick="enviar()"></p>
+        </div>
+    </section>
+    <div id="res">
+        <p>Envie as informações para obter o parecer.</p>
+    </div>
+
+   <script src="inves.js"></script>
+</body>
+</html>
