@@ -12,12 +12,19 @@
     <button class="btn btn-primary" type="button">
         Curtir <span class="badge">0</span>
     </button>
+
+    <div id="res">
+        <p>somando os clicks</p>
+    </div>
  <script>
     var contador = document.querySelector('.badge')
+    var res = document.getElementById('res')
     
     document.querySelector('button').addEventListener('click', function(){ 
         var numero = parseInt(contador.textContent) + 1
         contador.textContent = numero
+        res.innerHTML = `${numero}`
+        
     })
  </script>
 </body>
