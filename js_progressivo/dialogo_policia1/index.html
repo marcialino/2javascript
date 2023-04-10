@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diálogo Policial</title>
+</head>
+<body>
+    <header><h1>Investigação Policial</h1></header>
+
+<div>
+    <p>Você conhecia a vítima? <button>Change color</button>
+</div>
+<div id="res">
+<p>Responda as perguntas, clicando em Sim ou Não!</p>
+</div>
+  
+ <script>
+    /*var contador = document.querySelector('.sone')
+    var res = document.getElementById('res')
+    
+    document.querySelector('button').addEventListener('click', function(){ 
+        var numero = parseInt(contador.textContent)  + 1
+        contador.textContent = numero
+        res.innerHTML = `${numero}`
+        
+    })*/
+const btn = document.querySelector('button');
+
+function random(number) {
+  return Math.floor(Math.random() * (number+1));
+}
+
+btn.addEventListener('click', () => {
+  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  document.body.style.backgroundColor = rndCol;
+});
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+</body>
+</html>
