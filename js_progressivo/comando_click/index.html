@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Click</title>
+</head>
+<body>
+    <header><h1>Somando Clicks</h1></header>
+    
+    <button class="btn btn-primary" type="button">
+        Curtir <span class="badge">0</span>
+    </button>
+ <script>
+    var contador = document.querySelector('.badge')
+    
+    document.querySelector('button').addEventListener('click', function(){ 
+        var numero = parseInt(contador.textContent) + 1
+        contador.textContent = numero
+    })
+ </script>
+</body>
+</html>
