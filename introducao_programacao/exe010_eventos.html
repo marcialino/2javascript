@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        body{
+            background-color: rgb(207, 204, 201);
+            font: normal 14 pt Verdana;
+        }
+        h1{
+            color: black;
+        }
+        #btn{
+            padding: 10px;
+            font: normal 12pt Verdana;
+        }
+
+    </style>
+</head>
+<header><h1>Testando os Eventos</h1></header>
+
+<body onload="carregado()">
+    <p><button onclick="fuiClicado()" id="btn">Eu sou um botão</button></p> 
+    <p><button onmouseover="mouseEmCima()" onmouseout="mouseFora()" id="btn">Eu sou um botão</button></p>
+    <p><input type="text" onkeydown="tecladoUsado()" placeholder="Eu sou um texbox:D" id="btn"></p>
+    <p><input type="text" placeholder="Digita em mim" onchange="mudanca()" id="btn"></p>
+    <p><input type="text" placeholder="Digita em mim também" id="btn"></p>
+
+    <script src="one.js"></script>
+</body>
+
+</html>
