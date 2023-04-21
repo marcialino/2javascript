@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par/Impar</title>
+</head>
+<body>
+    <div>
+        Digite um número: <input type="number" name="num" id="num">
+        <p><button type="button" name="btn" id="btn" onclick="clicar()">Clicar</button></p>
+    </div>
+    <div id="res">
+        <p>
+            Digite um número inteiro e clique no botão!
+        </p>
+    </div>
+
+    <script>
+        function clicar(){
+            var num = window.document.getElementById('num').value
+            var res = window.document.getElementById('res')
+
+            if(num.length == 0){
+                alert('Digite um número para começar!')
+            }else if(num%2 == 0){
+                res.innerHTML = `O ${num} é um número <strong>PAR</strong>!`
+            }else{
+                res.innerHTML = `O ${num} é um número <strong>IMPAR</strong>!`
+            }
+            
+        }
+    </script>
+</body>
+</html>
