@@ -6,6 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evento</title>
     <style>
+
+        header{
+            background-color: aliceblue;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav{
+            background-color: #b8b6b6;
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0, 0.464);
+        }
+        nav > a{ 
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            margin-right: 30px;
+        }
+        nav > a:hover{
+            text-decoration: underline;
+            color: black;
+        }
+
+      
+        main{
+            background-color: rgba(247,242,247,0.996);
+        }
         #text1{
             color: white;
             background-color: #2f2e2e;
@@ -35,23 +64,43 @@
             display: inline-block;
 
         }
+        footer > p{
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 14pt;
+        }
     </style>
         
 </head>
-<header><h1>Evento JS: meu site</h1></header>
+
 <body id="pg"  onload="pg_carregada()">
-<section>
+
+ <header><h1>Meu site</h1>
+        <nav>
+            <a href="#">Théo</a>
+            <a href="#">Isa</a>
+            <a href="#">Olívia</a>
+        </nav>
+</header>
+
+<main>
+    <section>
     
-    <div class="quadrado" id="text1"><h2>Boas lembranças!</h2>
-        <p>Meus netos, minha alegria!</p>
+        <div class="quadrado" id="text1"><h2>Boas lembranças!</h2>
+            <p>Meus netos, minha alegria!</p>
     
-    </div>
-
-    <div class="quadrado"><img src="foto1.jpg" alt="vovo, theo, isa" srcset=""></div>
-  
-
-
-</section>
+        </div>
+    
+        <div class="quadrado"><img src="foto1.jpg" alt="vovo, theo, isa" srcset=""></div>
+    
+    
+    
+    </section>
+</main>
+<footer>
+    <p>&copy; Márcia Lino</p>
+</footer>
     
     <script src="two.js"></script>
 </body>
