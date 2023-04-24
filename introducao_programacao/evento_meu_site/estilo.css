@@ -44,7 +44,7 @@
             
         }
 
-        img{
+        #foto1{
             background-color: #624763;
             width:600px;
             height: 330px ;
@@ -90,10 +90,4 @@
             text-decoration: none;
             font-weight: bold;
         }
-        .gallery-container{
-            display:flex;
-        }
-        .gallery-items{
-            width: 340px;
-            height: 340px;
-        }
+       
