@@ -140,10 +140,10 @@
             grid-row-end: 3;
         }
         .gallery_item--4{
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 4;
-            grid-row-end: 6;
+            grid-column-start: 7;
+            grid-column-end: 9;
+            grid-row-start: 5;
+            grid-row-end: 7;
         }
         .gallery_item--5{
             grid-column-start: 7;
@@ -157,3 +157,8 @@
             grid-row-start:4;
             grid-row-end: 6;
         }
+        .gallery_item--6{
+            grid-column-start: 5;
+            grid-column-end: 7;
+            grid-row-start:4;
+            grid-row-end: 6;
