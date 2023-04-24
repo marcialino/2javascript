@@ -89,11 +89,24 @@
             padding: 0 2vw;
            
         }
-        .gallery-items{
+        #img1{
+            width: auto;
+            margin-top: 10px;
+            margin-left:100px;
+            margin-right: 2px;
+            object-fit: cover;
+            padding: 10px;
+            display: inline;
+
+          
+        }
+        #img2{
+            width: auto;
             margin-top: 10px;
             margin-left: 30px;
             object-fit: cover;
-            display: inline-block;
-          
+            padding: 10px;
+            display: inline;
+            margin-right: 2px;
         }
         
