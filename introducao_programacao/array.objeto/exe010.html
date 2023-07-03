@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício array</title>
+</head>
+<body>
+    <h1>Analise o seguinte código em JS</h1>
+    <p id="res">O resultado é:</p>
+
+    <script>
+
+        var res = document.getElementById('res')
+        var frutas = new Array('banana', 'laranja', 'limão')
+
+        frutas.shift()/*remove o primeiro elemento da array */
+
+        /*Usando o splice, você remove todos os elementos que estão a partir da posição definida. No exemplo abaixo: irá remover um elemento (se refere ao segundo 1), a partir da posição 1. E acrescenta o elemento 'uva' */
+        frutas.splice(1,1,'uva')
+        for(var i=0; i<frutas.length;i++){
+            res.innerHTML=`O resultado é: ${frutas[i]}`
+        }
+
+    </script>
+</body>
+</html>
