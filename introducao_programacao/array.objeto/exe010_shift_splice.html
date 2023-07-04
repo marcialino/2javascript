@@ -7,19 +7,21 @@
 </head>
 <body>
     <h1>Analise o seguinte código em JS</h1>
+   
     <p id="res">O resultado é:</p>
 
     <script>
+    var res = document.getElementById('res')
+    
+    var frutas = new Array('banana', 'laranja', 'limão')
 
-        var res = document.getElementById('res')
-        var frutas = new Array('banana', 'laranja', 'limão')
-
-        frutas.shift()/*remove o primeiro elemento da array */
+       frutas.shift() /*remove o primeiro elemento da array */
+        
 
         /*Usando o splice, você remove todos os elementos que estão a partir da posição definida. No exemplo abaixo: irá remover um elemento (se refere ao segundo 1), a partir da posição 1. E acrescenta o elemento 'uva' */
-        frutas.splice(1,1,'uva')
+        frutas.splice(1, 1,"uva")
         for(var i=0; i<frutas.length;i++){
-            res.innerHTML=`O resultado é: ${frutas[i]}`
+            res.innerHTML= (frutas[i] + '|')
         }
 
     </script>
